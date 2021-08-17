@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 
-export default function user1(){
+export default function Id(){
     const router = useRouter()
 
     return(
         <div>
             <h2>Detalles del usuario</h2>
-            <p>ID del usuario: {router.query.user}</p>
+            <p>ID del usuario: {router.query.id}</p>
         </div>
     )
 }
