@@ -6,6 +6,17 @@ export default function Index(){
         <Layout>
             <Title>Inicio</Title>
             Index
+            <style>
+                {`
+                  p {
+                    color: darkgray;
+                  }
+
+                  p:hover {
+                    color: darkred;
+                  }
+                `}
+            </style>
         </Layout>
     )
 }
