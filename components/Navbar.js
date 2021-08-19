@@ -12,9 +12,6 @@ const Navbar = () => {
             <Link href={'/post'}>
                 <a>Posts</a>
             </Link>
-            <Link href={'/post/[id]'} as={`/post/${5}`}>
-                <a>Posts</a>
-            </Link>
         </nav>
     )
 }

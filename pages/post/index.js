@@ -1,10 +1,12 @@
-import Navbar from "../../components/Navbar";
+
+import Title from "../../components/Tittle";
+import Layout from "../../components/Layout";
 
 export default function Index(){
     return(
-        <div>
-            <Navbar />
+        <Layout>
+            <Title>Publicaciones</Title>
             Mis Post
-        </div>
+        </Layout>
     )
 }
