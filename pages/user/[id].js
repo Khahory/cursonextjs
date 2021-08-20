@@ -58,10 +58,19 @@ export default function Usuario( {user} ){
 }
 
 export async function getStaticPaths(){
-    const paths = [
-        { params: { id: '1' } },
-        { params: { id: '2' } },
-    ]
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const users = await res.json();
+
+    // const paths = [
+    //     { params: { id: '1' } },
+    //     { params: { id: '2' } },
+    // ]
+
+    const paths = users.map(user => {
+        return {
+            params: { id: `${user.id}` }
+        }
+    });
 
     return {
         paths,
