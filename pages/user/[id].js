@@ -14,3 +14,14 @@ export default function Id(){
         </Layout>
     )
 }
+
+export async function getStaticProps({ params }) {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+    const user = await res.json();
+
+    return {
+        props: {
+            user
+        }
+    }
+}
